@@ -46,21 +46,24 @@ public class BaseClass {
 	}
 	
 	@BeforeClass
-	public void OpenBrowser(String BROWSER) throws Throwable
+	public void OpenBrowser() throws Throwable
 	{
-		WebDriverManager.chromedriver().setup();
-		WebDriverManager.firefoxdriver().setup();
-		WebDriverManager.edgedriver().setup();
+		
+		
+		
 		String projectConfigDataFilePath=fLib.getFilePathFromPropertiesFile("projectConfigDataFilePath");
 		BROWSER=fLib.getDataFromProperties(projectConfigDataFilePath, "browser");
 		if(BROWSER.equalsIgnoreCase("chrome"))
 		{
+			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
 		}
 		else if (BROWSER.equalsIgnoreCase("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
 			driver=new FirefoxDriver();
 		}
 		else if (BROWSER.equalsIgnoreCase("edge")) {
+			WebDriverManager.edgedriver().setup();
 			driver=new EdgeDriver();
 		}
 		else
