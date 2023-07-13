@@ -52,7 +52,7 @@ public class BaseClass {
 		
 		
 		String projectConfigDataFilePath=fLib.getFilePathFromPropertiesFile("projectConfigDataFilePath");
-		BROWSER=fLib.getDataFromProperties(projectConfigDataFilePath, "browser");
+		String BROWSER=fLib.getDataFromProperties(projectConfigDataFilePath, "browser");
 		if(BROWSER.equalsIgnoreCase("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
