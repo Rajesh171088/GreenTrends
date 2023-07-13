@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="practice1.TSTest">
+      <class name="greentrade.crm.testNg.VerifyToolTipOfCampaignTest">
         <methods>
+          <include name="toolTipVerification"/>
           <include name="OpenBrowser"/>
           <include name="login"/>
           <include name="closeDBConnection"/>
           <include name="logout"/>
-          <include name="print"/>
           <include name="connectToDataBase"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- practice1.TSTest -->
+      </class> <!-- greentrade.crm.testNg.VerifyToolTipOfCampaignTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
